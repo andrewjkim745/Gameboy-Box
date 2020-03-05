@@ -1,0 +1,37 @@
+.nav-container {
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+    position: fixed;
+    width: 100%;
+}
+
+.title {
+    display: flex;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+h2 {
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-links p {
+    color: white;
+    margin: .5rem;
+}
+
+.logo {
+    width: 4rem;
+}
+
