@@ -5,6 +5,8 @@
 
 MVP
 
+
+
 [] Set Up Backend models and migrations
 
 
@@ -30,6 +32,11 @@ MVP
 
 
 [] Set up User Authentication
+
+
+
+
+
 
 
 
