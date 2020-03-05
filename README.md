@@ -5,31 +5,31 @@
 
 MVP
 
-#[] Set Up Backend models and migrations
+[] Set Up Backend models and migrations
 
 
 
-#[] Set up Front end
-
-
-
-
-#[] Seed Data ???
+[] Set up Front end
 
 
 
 
-#[] Create Design for Website
+[] Seed Data ???
 
 
 
 
-#[] Style
+[] Create Design for Website
 
 
 
 
-#[] Set up User Authentication
+[] Style
+
+
+
+
+[] Set up User Authentication
 
 
 
@@ -37,12 +37,16 @@ MVP
 Post MVP
 
 
-#[] Search feature
+[] Search feature
 
-#[] Carousel
 
-#[] Add extra animations
+[] Carousel
 
-#[] Add Dark mode
 
-#[] Any other ideas?
+[] Add extra animations
+
+
+[] Add Dark mode
+
+
+[] Any other ideas?
