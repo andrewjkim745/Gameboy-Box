@@ -1,9 +1,9 @@
 .nav-container {
     display: flex;
     justify-content: center;
-    background-color: gray;
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
 .title {
