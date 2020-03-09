@@ -8,7 +8,7 @@ const NavBar = (props) => {
     <div className='nav-container'>
         <div className='nav-bar'>
         <div className='title'>
-        <img className='logo' src='https://static.thenounproject.com/png/28679-200.png'></img>
+        <img className='logo' src='https://i.imgur.com/PdBoInC.png'></img>
         <h2>Gameboyboxd</h2>
         </div>
         <div className='nav-links'>

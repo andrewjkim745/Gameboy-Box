@@ -1,0 +1,17 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 2rem;
+    box-shadow: inset 0 0 0 1px rgba(221, 238, 255, .35)
+}
+
+.card-image {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.card:hover {
+    border: 2px solid lightgreen;
+}

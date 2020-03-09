@@ -1,5 +1,7 @@
 .backdrop-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
@@ -7,13 +9,81 @@
 
 
 .backdrop {
-    background-image: url('https://images.nintendolife.com/d8798916e6848/ninja-five-o-cover.cover_large.jpg');
+    background-image: url('https://i.ytimg.com/vi/l_myXsUmhok/maxresdefault.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    width: 50%;
+    width: 60%;
     height: 100%;
-    top: -10px;
-    z-index: -999;
+    top: 20px;
+    z-index: 0;
+    box-shadow: 100px 50px 50px 0 #2c3440 inset, -100px -350px 50px 0px #2c3440 inset;
+}
 
+.landing-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 31rem;
+    position: relative;
+    z-index: 2;
+}
+
+.landing-quote h2 {
+    color: #fff;
+    font-family: 'Courier Prime', monospace;
+}
+
+.landing-quote a {
+    background-color: #00c030;
+    padding: .625rem;
+    color: white;
+    border-radius: 1rem;
+    font-family: 'Courier Prime', monospace;
+}
+
+
+.social {
+    font-family: 'Raleway', sans-serif;
+    color: #778899;
+}
+
+.platforms {
+    display: flex;
+    align-items: center;
+}
+
+.platforms img {
+    min-width: 30px;
+    min-height: 30px;
+    margin-left: .5rem;
+}
+
+.stats-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 1rem 3.5rem;
+    background-color: rgba(black,.7);
+    color: white;
+    animation: fadeInOpacity;
+    animation-timing-function: ease-in-out;
+    animation-duration: .3s;
+}
+
+.card-carousel {
+    overflow: scroll;
+    display: flex;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
