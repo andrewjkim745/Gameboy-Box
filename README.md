@@ -3,6 +3,9 @@
 Hi its Phil
 
 
+current look of the static website with hard coded data gameboxd.surge.sh
+
+
 MVP
 
 
