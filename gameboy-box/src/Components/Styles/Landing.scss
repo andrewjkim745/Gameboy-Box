@@ -13,11 +13,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    width: 70%;
+    width: 60%;
     height: 100%;
-    top: 50px;
+    top: 20px;
     z-index: 0;
-    box-shadow: 100px 25px 50px 0 #2c3440 inset, -90px -20px 50px 25px #2c3440 inset;
+    box-shadow: 100px 50px 50px 0 #2c3440 inset, -100px -350px 50px 0px #2c3440 inset;
 }
 
 .landing-quote {
@@ -25,7 +25,37 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 50rem;
+    top: 31rem;
     position: relative;
     z-index: 2;
+}
+
+.landing-quote h2 {
+    color: #fff;
+    font-family: 'Courier Prime', monospace;
+}
+
+.landing-quote a {
+    background-color: #00c030;
+    padding: .625rem;
+    color: white;
+    border-radius: 1rem;
+    font-family: 'Courier Prime', monospace;
+}
+
+
+.social {
+    font-family: 'Raleway', sans-serif;
+    color: #778899;
+}
+
+.platforms {
+    display: flex;
+    align-items: center;
+}
+
+.platforms img {
+    min-width: 30px;
+    min-height: 30px;
+    margin-left: .5rem;
 }

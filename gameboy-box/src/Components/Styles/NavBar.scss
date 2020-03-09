@@ -4,6 +4,13 @@
     position: fixed;
     width: 100%;
     z-index: 1;
+    background-color: transparent;
+    opacity: .4;
+}
+
+.nav-container:hover {
+    transition: opacity .4s cubic-bezier(.165, .84, .44, 1);
+    opacity: 1;
 }
 
 .title {
@@ -13,11 +20,11 @@
 .nav-bar {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 70%;
 }
 
-h2 {
-    color: white;
+.nav-container h2 {
+    color: purple;
 }
 
 .nav-links {
@@ -35,8 +42,24 @@ h2 {
     width: 4rem;
 }
 
-
 .search-bar {
-    border-radius: 10px;
+    display: flex;
+    align-items: center;
     color: white;
 }
+
+.search-bar input {
+    margin-left: 2rem;
+    background-color: hsla(0, 0%, 100%, .25);
+    box-shadow: none;
+    border-radius: 1rem;
+    padding-left: 1rem;
+}
+
+.search-bar input:hover {
+    background-color: white
+}
+
+
+
+
