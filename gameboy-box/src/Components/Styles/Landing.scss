@@ -59,3 +59,31 @@
     min-height: 30px;
     margin-left: .5rem;
 }
+
+.stats-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 1rem 3.5rem;
+    background-color: rgba(black,.7);
+    color: white;
+    animation: fadeInOpacity;
+    animation-timing-function: ease-in-out;
+    animation-duration: .3s;
+}
+
+.card-carousel {
+    overflow: scroll;
+    display: flex;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
