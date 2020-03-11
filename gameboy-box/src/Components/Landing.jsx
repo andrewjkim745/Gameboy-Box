@@ -1,6 +1,7 @@
 import React from 'react'
 import './Styles/Landing.scss'
-import Card from './PageComponents/Card'
+import CardItem from './PageComponents/Card'
+import Highlights from './PageComponents/Highlights'
 
 
 
@@ -10,6 +11,7 @@ class Landing extends React.Component {
 
         this.state = {
             hover: false,
+            highlights: false,
             stats: [
                 {
                     image: 'https://cdn.bulbagarden.net/upload/thumb/6/62/Sapphire_EN_boxart.png/250px-Sapphire_EN_boxart.png',
@@ -21,8 +23,33 @@ class Landing extends React.Component {
                     votes: 19345,
                     rating: 5670
                 }
+            ],
+            highlights: [
+                {   
+                    image: 'https://i.imgur.com/Z1l5Hul.png',
+                    text: "Keep Track of every game you've ever played (or just start from the day you join)" 
+                },
+                {
+                    image: 'https://i.imgur.com/tSF1Ujf.png',
+                    text: 'Show some love for your favorite games, lists and reviews with a "like"'
+                },
+                {
+                    image: 'https://i.imgur.com/q9diuHj.png',
+                    text: 'Write and share reviews, and follow friends and other members to read theirs'
+                },
+                {
+                    image: 'https://i.imgur.com/hcx2CH5.png',
+                    text: 'Rate each game on a five-star scale (with halves) to record and share your reaction'
+                },
+                {
+                    image: 'https://i.imgur.com/mEtHYze.png',
+                    text: 'Keep a diary of your game playing (and upgrade to Pro for comprehensive stats)'
+                },
+                {
+                    image: 'https://i.imgur.com/m7ACBCN.png',
+                    text: 'Compile and share lists of games of any genre and keep a watchlist of games to play'
+                }
             ]
-
         }
     }
 
@@ -32,18 +59,42 @@ class Landing extends React.Component {
         })
     }
 
+    handleMouseOut = () => {
+        this.setState({
+            hover: null
+        })
+    }
+
     renderCards = () => {
         return (
             <div className='card-carousel'>
                 {this.state.stats.map(stat => {
                     return (
-                        <Card
+                        <CardItem
                             key={stat.id}
                             image={stat.image}
-                            onMouseEnter={() => this.handleMouseHover()}
-                            onMouseLeave={() => this.handleMouseHover()}
-                            renderVotesRatings={this.renderVotesRatings()}>
-                        </Card>
+                            onMouseEnter={() => this.setState({ hover: true })}
+                            onMouseLeave={() => this.setState({ hover: false})}
+                            renderVotesRatings={this.renderVotesRatings()}
+                            rating={stat.rating}
+                            votes={stat.votes}
+                        />
+                    );
+                })}
+            </div>
+        )
+    }
+
+    renderHighlights = () => {
+        return (
+            <div className='highlights-container'>
+                {this.state.highlights.map(highlight => {
+                    return (
+                        <Highlights
+                            key={highlight.id}
+                            src={highlight.image}
+                            text={highlight.text}
+                        />
                     )
                 })}
             </div>
@@ -88,6 +139,7 @@ class Landing extends React.Component {
                         <img src='https://i.imgur.com/lVE3fWI.png'></img>
                     </div>
                     {this.renderCards()}
+                    {this.renderHighlights()}
                 </div>
             </>
         )
