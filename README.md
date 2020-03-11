@@ -6,6 +6,8 @@ Hi its Phil
 current look of the static website with hard coded data 
 gameboxd.surge.sh
 
+update site with npm run deploy
+
 
 MVP
 
