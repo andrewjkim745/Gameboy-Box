@@ -24,7 +24,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 60%;
+    width: 80%;
+}
+
+h3 {
+    color: #def;
 }
 
 .landing-quote {
@@ -84,6 +88,27 @@
 .card-carousel {
     overflow: scroll;
     display: flex;
+}
+
+.reviewed-parent-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.reviewed-top-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #456;
+}
+
+.reviewed-top-container p {
+    color: #def;
+}
+.reviewed-cards-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
 }
 
 @keyframes fadeInOpacity {

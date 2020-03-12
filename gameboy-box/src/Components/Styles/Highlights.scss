@@ -7,13 +7,17 @@
     margin-left: .8rem;
     box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .1);
     border-radius: .2rem;
-    cursor: pointer;
+    &:hover {
+        background-color: lightskyblue;
+    }
 }
 
-.highlight-card:hover {
-    color: lightblue;
+.highlights-parent-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
 .image-container div {
     // width: 20%;
 }
