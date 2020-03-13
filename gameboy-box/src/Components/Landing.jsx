@@ -112,7 +112,8 @@ class Landing extends React.Component {
                         'Nice Nostalgia glasses buddy',
                         'The snowball fight tho?',
                         'Ritz my waifu'
-                    ]
+                    ],
+                    likes: 245
                 },
                 {
                     title: 'Kirby & the Amazing Mirror',
@@ -125,7 +126,8 @@ class Landing extends React.Component {
                     comments: [
                         'Trash Game',
                         'Game would have been better if there wasnt already an amazing kirby game for gba'
-                    ]
+                    ],
+                    likes: 344
                 },
                 {   
                     title: 'Fire Emblem',
@@ -140,7 +142,8 @@ class Landing extends React.Component {
                         'Hector tho?',
                         'ELIWOOD THO?',
                         '^^plebs'
-                    ]
+                    ],
+                    likes: 290
                 },
                 {
                     title: 'Kingdom Hearts Chain of Memories',
@@ -152,7 +155,8 @@ class Landing extends React.Component {
                     userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Whens KH3?'
-                    ]
+                    ],
+                    likes: 200
                 },
                 {
                     title: 'Sonic Battle',
@@ -165,7 +169,8 @@ class Landing extends React.Component {
                     comments: [
                         'Game sucks and doesnt deserve anything above 2',
                         'I quit playing this game after 10 minutes'
-                    ]
+                    ],
+                    likes: 240
                 },
                 {
                     title: 'Sonic Advance 2',
@@ -177,7 +182,8 @@ class Landing extends React.Component {
                     userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Lol you are giving a rating for a game you have never played'
-                    ]
+                    ],
+                    likes: 300
                 }
             ]
         }
@@ -294,6 +300,7 @@ class Landing extends React.Component {
                             likes={review.likes}
                             date={review.date}
                             commentCount={review.comments.length}
+                            user={review.user}
                             src2={review.userImage}
                         />
                     )

@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaComment, FaHeart } from 'react-icons/fa'
 import '../Styles/BottomLeftCard.scss'
+import StarRatingComponent from 'react-star-rating-component';
 
 
 
@@ -23,6 +24,11 @@ const BottomLeftCard = (props) => {
                         <img src={props.src2}></img>
                     </div>
                     <h5>{props.user}</h5>
+                    <StarRatingComponent
+                        name={'hello'}
+                        starCount={props.rating}
+                        emptyStarColor={'green'}
+                    />
                     <FaComment />
                     <p>{props.commentCount}</p>
                 </div>

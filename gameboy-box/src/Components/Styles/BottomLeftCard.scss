@@ -1,7 +1,7 @@
 .title-date {
     display: flex;
     justify-content: space-between;
-    width: 30%;
+    width: 40%;
 }
 
 .title-date h4 {
@@ -16,7 +16,7 @@
 .user-rating {
     display: flex;
     justify-content: space-between;
-    width: 20%;
+    width: 25%;
     align-items: center;
 }
 
@@ -48,4 +48,8 @@
 }
 .bottom-card-right-container {
     margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;s
 }

@@ -119,6 +119,9 @@ h3 {
 
 .bottom-card-container {
     display: flex;
+    align-items: center;
+    border-bottom: 1px solid #456;
+    padding: 1.5rem 0px;
 }
 
 .bottom-left-title {
@@ -126,6 +129,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     width: 67%;
+    border-bottom: 1px solid #456;
 }
 .bottom-left-title p {
     color: #89a;
