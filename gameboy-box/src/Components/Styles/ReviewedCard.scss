@@ -1,0 +1,12 @@
+.reviewed-container img {
+    max-width: 8rem;
+    max-height: 10rem;
+    border-radius: 15px;
+}
+
+.reviewed-container {
+    position: relative;
+    &:hover {
+        color: limegreen;
+    }
+}

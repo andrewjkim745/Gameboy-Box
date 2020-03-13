@@ -13,11 +13,22 @@
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    width: 60%;
+    width: 65%;
     height: 100%;
     top: 20px;
     z-index: 0;
     box-shadow: 100px 50px 50px 0 #2c3440 inset, -100px -350px 50px 0px #2c3440 inset;
+}
+
+.highlights-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+}
+
+h3 {
+    color: #def;
 }
 
 .landing-quote {
@@ -77,6 +88,27 @@
 .card-carousel {
     overflow: scroll;
     display: flex;
+}
+
+.reviewed-parent-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.reviewed-top-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #456;
+}
+
+.reviewed-top-container p {
+    color: #def;
+}
+.reviewed-cards-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
 }
 
 @keyframes fadeInOpacity {

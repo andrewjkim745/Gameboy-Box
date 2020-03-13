@@ -1,0 +1,44 @@
+.highlight-card {
+    display: flex;
+    width: 30%;
+    padding: 0px .5rem;
+    background: #456;
+    margin-top: .8rem;
+    margin-left: .8rem;
+    box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .1);
+    border-radius: .2rem;
+    &:hover {
+        background-color: lightskyblue;
+    }
+}
+
+.highlights-parent-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.image-container div {
+    // width: 20%;
+}
+
+.highlight-card img {
+    width: 100%;
+}
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20%;
+    // width: 50%;
+}
+
+.highlight-text {
+    // margin-left: 2rem;
+    margin-left: 1px;
+}
+
+.highlight-text p {
+    font-size: .9rem;
+    color: #def;
+}
