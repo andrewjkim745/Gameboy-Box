@@ -86,7 +86,7 @@ h3 {
 }
 
 .card-carousel {
-    overflow: scroll;
+    // overflow: scroll;
     display: flex;
 }
 
@@ -109,6 +109,26 @@ h3 {
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
+}
+
+.bottom-left-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.bottom-card-container {
+    display: flex;
+}
+
+.bottom-left-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 67%;
+}
+.bottom-left-title p {
+    color: #89a;
 }
 
 @keyframes fadeInOpacity {

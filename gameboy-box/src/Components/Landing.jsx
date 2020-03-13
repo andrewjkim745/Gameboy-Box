@@ -64,6 +64,7 @@ class Landing extends React.Component {
                     rating: 4,
                     date: '2004',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'LOL fire red is better LOL',
                         'WOW GREAT REVIEW ANDREW KEEP IT UP',
@@ -80,6 +81,7 @@ class Landing extends React.Component {
                     rating: 5,
                     date: '2003',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Kinda reminds me of the paper mario series'
                     ],
@@ -92,6 +94,7 @@ class Landing extends React.Component {
                     rating: 1,
                     date: '2001',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Its okay'
                     ],
@@ -104,6 +107,7 @@ class Landing extends React.Component {
                     rating: 5,
                     date: '2003',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Nice Nostalgia glasses buddy',
                         'The snowball fight tho?',
@@ -117,6 +121,7 @@ class Landing extends React.Component {
                     rating: 3,
                     date: '2004',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Trash Game',
                         'Game would have been better if there wasnt already an amazing kirby game for gba'
@@ -129,6 +134,7 @@ class Landing extends React.Component {
                     rating: 4.5,
                     date: '2003',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Lyn tho',
                         'Hector tho?',
@@ -143,6 +149,7 @@ class Landing extends React.Component {
                     rating: 3.5,
                     date: '2004',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Whens KH3?'
                     ]
@@ -154,6 +161,7 @@ class Landing extends React.Component {
                     rating: 4,
                     date: '2003',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Game sucks and doesnt deserve anything above 2',
                         'I quit playing this game after 10 minutes'
@@ -166,6 +174,7 @@ class Landing extends React.Component {
                     rating: 3,
                     date: '2003',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Lol you are giving a rating for a game you have never played'
                     ]
@@ -270,7 +279,7 @@ class Landing extends React.Component {
     renderBottomCards = () => {
         return (
             <div className='bottom-left-container'>
-                <div>
+                <div className='bottom-left-title'>
                     <h3>POPULAR REVIEWS THIS WEEK</h3>
                     <p>More</p>
                 </div>
@@ -285,6 +294,7 @@ class Landing extends React.Component {
                             likes={review.likes}
                             date={review.date}
                             commentCount={review.comments.length}
+                            src2={review.userImage}
                         />
                     )
                 })}

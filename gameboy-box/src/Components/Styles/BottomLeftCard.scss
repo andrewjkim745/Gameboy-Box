@@ -1,0 +1,51 @@
+.title-date {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.title-date h4 {
+    color: #89a;
+}
+
+.bottom-image-container img {
+    max-width: 250px;
+    min-height: 250px;
+}
+
+.user-rating {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    align-items: center;
+}
+
+.user-rating img{
+    max-width: 30px;
+}
+.user-rating p {
+    color: #89a;
+}
+
+.description {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+.description p {
+    color: #89a;
+}
+
+.favorites {
+    display: flex;
+    align-items: center;
+    width: 10%;
+    justify-content: space-between;
+}
+
+.favorites p {
+    color: #89a;
+}
+.bottom-card-right-container {
+    margin-left: 10px;
+}
