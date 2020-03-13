@@ -5,6 +5,7 @@ import Highlights from './PageComponents/Highlights'
 import ReviewedCard from './PageComponents/ReviewedCard'
 import { IoIosMenu } from 'react-icons/io'
 import { FiSearch } from 'react-icons/fi'
+import BottomLeftCard from './PageComponents/BottomLeftCard'
 import './Styles/NavBar.scss'
 
 
@@ -56,32 +57,118 @@ class Landing extends React.Component {
                 }
             ],
             Reviewed: [
-                {
-                    image: 'https://upload.wikimedia.org/wikipedia/en/a/a7/Pokemon_LeafGreen_box.jpg'
+                {   
+                    title: 'Pokemon Leaf Green',
+                    image: 'https://upload.wikimedia.org/wikipedia/en/a/a7/Pokemon_LeafGreen_box.jpg',
+                    description: 'Honestly a great remake and this game makes me think that pokemon yellow, red and blue didnt need the pokemon lets go series.',
+                    rating: 4,
+                    date: '2004',
+                    user: 'adogdog',
+                    comments: [
+                        'LOL fire red is better LOL',
+                        'WOW GREAT REVIEW ANDREW KEEP IT UP',
+                        'Why not just play Fire Red?',
+                    ],
+                    likes: 793
+
+
                 },
                 {
-                    image: 'https://vignette.wikia.nocookie.net/mario/images/2/23/Mario_%26_Luigi_Superstar_Saga_-_North_American_Cover.png/revision/latest?cb=20120622213536'
+                    title: 'Mario & Luigi SuperStar Saga',
+                    image: 'https://vignette.wikia.nocookie.net/mario/images/2/23/Mario_%26_Luigi_Superstar_Saga_-_North_American_Cover.png/revision/latest?cb=20120622213536',
+                    description: 'My first ever rpg. It has its flaws such as the fact that it is fairy linear, but the turn based system along with bros. combos system has depth. Another thing that makes this game unique is that during the enemies turns, you as a player have control over whether or not you get hit. Bosses attack patterns that become harder and harder to learn as the game progresses and somtimes they will even fake you out. Great Game',
+                    rating: 5,
+                    date: '2003',
+                    user: 'adogdog',
+                    comments: [
+                        'Kinda reminds me of the paper mario series'
+                    ],
+                    likes: 456
                 },
                 {
-                    image: 'https://upload.wikimedia.org/wikipedia/en/a/a7/Advance_Wars_Coverart.jpg'
+                    title: 'Advance Wars',
+                    image: 'https://upload.wikimedia.org/wikipedia/en/a/a7/Advance_Wars_Coverart.jpg',
+                    description: 'Never Played as a Kid, is it good?',
+                    rating: 1,
+                    date: '2001',
+                    user: 'adogdog',
+                    comments: [
+                        'Its okay'
+                    ],
+                    likes: 151
+                },
+                {  
+                    title: 'Final Fantasy Tactics Advance',
+                    image: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/FinalFantasyTacticsAdvanceGBACoverArtUS.jpg/220px-FinalFantasyTacticsAdvanceGBACoverArtUS.jpg',
+                    description: 'I had a lot of trouble with this game as a kid and the story really captivated me. A group of kids being transported into a fantasy world where their lives are so much better and more interesting? Literally my dream as a kid. The game has a main quest which is about 15-20 hours long if you are a decent player, and tons of extra content that extends the total gametime to at least 40-50 hours.',
+                    rating: 5,
+                    date: '2003',
+                    user: 'adogdog',
+                    comments: [
+                        'Nice Nostalgia glasses buddy',
+                        'The snowball fight tho?',
+                        'Ritz my waifu'
+                    ]
                 },
                 {
-                    image: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/FinalFantasyTacticsAdvanceGBACoverArtUS.jpg/220px-FinalFantasyTacticsAdvanceGBACoverArtUS.jpg'
+                    title: 'Kirby & the Amazing Mirror',
+                    image: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Kirby_%26_the_Amazing_Mirror.jpg/220px-Kirby_%26_the_Amazing_Mirror.jpg',
+                    description: 'I am not the biggest kirby fan, but I do enjoy it for what it is and this game embodies that.',
+                    rating: 3,
+                    date: '2004',
+                    user: 'adogdog',
+                    comments: [
+                        'Trash Game',
+                        'Game would have been better if there wasnt already an amazing kirby game for gba'
+                    ]
+                },
+                {   
+                    title: 'Fire Emblem',
+                    image: 'https://miro.medium.com/max/2154/1*Yi-lfOw522jn9FJLnwqHiA.jpeg',
+                    description: 'My first fire emblem was the roy game, but this game is definitely my favorite gba release. Its very basic fire emblem gameplay and thats all I wanted as a kid.',
+                    rating: 4.5,
+                    date: '2003',
+                    user: 'adogdog',
+                    comments: [
+                        'Lyn tho',
+                        'Hector tho?',
+                        'ELIWOOD THO?',
+                        '^^plebs'
+                    ]
                 },
                 {
-                    image: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Kirby_%26_the_Amazing_Mirror.jpg/220px-Kirby_%26_the_Amazing_Mirror.jpg'
+                    title: 'Kingdom Hearts Chain of Memories',
+                    image: 'https://upload.wikimedia.org/wikipedia/en/1/1d/KingdomHeartsCoMCover_.jpg',
+                    description: 'I love KH but didnt love how grindy this game felt as a kid. The battle system was cool and unique, but by the end of the game I didnt see a reason to not just make a deck with only 9s and a few 0s. Also, This game was the catalyst for making the kh storyline 3x as confusing.',
+                    rating: 3.5,
+                    date: '2004',
+                    user: 'adogdog',
+                    comments: [
+                        'Whens KH3?'
+                    ]
                 },
                 {
-                    image: 'https://miro.medium.com/max/2154/1*Yi-lfOw522jn9FJLnwqHiA.jpeg'
+                    title: 'Sonic Battle',
+                    image: 'https://upload.wikimedia.org/wikipedia/en/8/88/Sonic_Battle_Coverart.png',
+                    description: 'Technically my first "fighting game". Could be nostalgia goggles but I liked how there was an actual combo system that felt fun to implement with different characters. Characters also had different attributes and abilities that made them feel unique. The story was decent and had a lot of junk and extra material, but overall I felt the story was interesting and the ending almost made me cry as a kid',
+                    rating: 4,
+                    date: '2003',
+                    user: 'adogdog',
+                    comments: [
+                        'Game sucks and doesnt deserve anything above 2',
+                        'I quit playing this game after 10 minutes'
+                    ]
                 },
                 {
-                    image: 'https://upload.wikimedia.org/wikipedia/en/1/1d/KingdomHeartsCoMCover_.jpg'
-                },
-                {
-                    image: 'https://upload.wikimedia.org/wikipedia/en/8/88/Sonic_Battle_Coverart.png'
-                },
-                {
-                    image: 'https://images-na.ssl-images-amazon.com/images/I/61-84qWXw2L.jpg'
+                    title: 'Sonic Advance 2',
+                    image: 'https://images-na.ssl-images-amazon.com/images/I/61-84qWXw2L.jpg',
+                    description: 'Never played, but I have seen multiple newgrounds sonic sprite animations that came from this game',
+                    rating: 3,
+                    date: '2003',
+                    user: 'adogdog',
+                    comments: [
+                        'Lol you are giving a rating for a game you have never played'
+                    ]
                 }
             ]
         }
@@ -180,6 +267,31 @@ class Landing extends React.Component {
         )
     }
 
+    renderBottomCards = () => {
+        return (
+            <div className='bottom-left-container'>
+                <div>
+                    <h3>POPULAR REVIEWS THIS WEEK</h3>
+                    <p>More</p>
+                </div>
+                {this.state.Reviewed.map(review => {
+                    return (
+                        <BottomLeftCard
+                            key={review.id}
+                            title={review.title}
+                            image={review.image}
+                            description={review.description}
+                            rating={review.rating}
+                            likes={review.likes}
+                            date={review.date}
+                            commentCount={review.comments.length}
+                        />
+                    )
+                })}
+            </div>
+        )
+    }
+
     renderReviewed = () => {
         return (
             <div className='reviewed-cards-container'>
@@ -244,6 +356,7 @@ class Landing extends React.Component {
                         </div>
                         {this.renderReviewed()}
                     </div>
+                    {this.renderBottomCards()}
                 </div>
             </>
         )

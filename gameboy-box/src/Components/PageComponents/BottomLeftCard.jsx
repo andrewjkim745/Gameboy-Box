@@ -1,6 +1,6 @@
 import React from 'react'
-import FaComment from 'react-icons/fa'
-import FaHeart from 'react-icons/fa'
+import { FaComment, FaHeart } from 'react-icons/fa'
+import '../Styles/BottomLeftCard.scss'
 
 
 
@@ -12,7 +12,7 @@ const BottomLeftCard = (props) => {
         <div>
             <div>
                 <div>
-                <img src={props.src}></img>
+                <img src={props.image}></img>
                 </div>
                 <div>
                     <div className='title-date'>
@@ -40,3 +40,5 @@ const BottomLeftCard = (props) => {
         </div>
     )
 }
+
+export default BottomLeftCard
