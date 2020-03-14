@@ -1,12 +1,14 @@
 import React from 'react'
 import './Styles/Landing.scss'
-import CardItem from './PageComponents/Card'
+import CardItem from './PageComponents/CardItem'
 import Highlights from './PageComponents/Highlights'
 import ReviewedCard from './PageComponents/ReviewedCard'
 import { IoIosMenu } from 'react-icons/io'
 import { FiSearch } from 'react-icons/fi'
 import BottomLeftCard from './PageComponents/BottomLeftCard'
+import Lists from './PageComponents/Lists'
 import './Styles/NavBar.scss'
+import ListsImage from './PageComponents/ListsImage'
 
 
 
@@ -185,6 +187,24 @@ class Landing extends React.Component {
                     ],
                     likes: 300
                 }
+            ],
+
+            lists: [
+                {
+                    user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
+                    firstImage: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/FinalFantasyTacticsAdvanceGBACoverArtUS.jpg/220px-FinalFantasyTacticsAdvanceGBACoverArtUS.jpg',
+                    secondImage: 'https://upload.wikimedia.org/wikipedia/en/8/88/Sonic_Battle_Coverart.png',
+                    thirdImage: 'https://vignette.wikia.nocookie.net/mario/images/2/23/Mario_%26_Luigi_Superstar_Saga_-_North_American_Cover.png/revision/latest?cb=20120622213536',
+                    fourthImage: 'https://upload.wikimedia.org/wikipedia/en/a/a7/Pokemon_LeafGreen_box.jpg',
+                    fifthImage: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Metroid_Fusion_box.jpg/220px-Metroid_Fusion_box.jpg',
+                    likes: '2,770',
+                    description: 'Games in which I treasure as part of my early childhood and will always be some of my favorite games of all time. Every game on the list is objectively better than phils favorite games',
+                    comments: [
+                        'lol trash list'
+                    ]
+
+                }
             ]
         }
     }
@@ -342,6 +362,28 @@ class Landing extends React.Component {
             )
     }
 
+    renderLists = () => {
+        return (
+            <Lists >
+            {this.state.lists.map(list =>{
+                return (
+                    <ListsImage 
+                        key={list.id}
+                        firstImage={list.firstImage}
+                        secondImage={list.secondImage}
+                        thirdImage={list.thirdImage}
+                        fourthImage={list.fourthImage}
+                        fifthImage={list.fifthImage}
+                        description={list.description} 
+                        user={list.user}
+                        userImage={list.userImage}
+                    />
+                )
+            })}
+            </Lists>
+        )
+    }
+
     render() {
         return (
             <>
@@ -374,6 +416,7 @@ class Landing extends React.Component {
                         {this.renderReviewed()}
                     </div>
                     {this.renderBottomCards()}
+                    {this.renderLists()}
                 </div>
             </>
         )
