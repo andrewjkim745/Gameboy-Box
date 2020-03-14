@@ -1,12 +1,14 @@
 import React from 'react'
 import './Styles/Landing.scss'
-import CardItem from './PageComponents/Card'
+import CardItem from './PageComponents/CardItem'
 import Highlights from './PageComponents/Highlights'
 import ReviewedCard from './PageComponents/ReviewedCard'
 import { IoIosMenu } from 'react-icons/io'
 import { FiSearch } from 'react-icons/fi'
 import BottomLeftCard from './PageComponents/BottomLeftCard'
+import Lists from './PageComponents/Lists'
 import './Styles/NavBar.scss'
+import ListsImage from './PageComponents/ListsImage'
 
 
 
@@ -64,6 +66,7 @@ class Landing extends React.Component {
                     rating: 4,
                     date: '2004',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'LOL fire red is better LOL',
                         'WOW GREAT REVIEW ANDREW KEEP IT UP',
@@ -80,6 +83,7 @@ class Landing extends React.Component {
                     rating: 5,
                     date: '2003',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Kinda reminds me of the paper mario series'
                     ],
@@ -92,6 +96,7 @@ class Landing extends React.Component {
                     rating: 1,
                     date: '2001',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Its okay'
                     ],
@@ -104,11 +109,13 @@ class Landing extends React.Component {
                     rating: 5,
                     date: '2003',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Nice Nostalgia glasses buddy',
                         'The snowball fight tho?',
                         'Ritz my waifu'
-                    ]
+                    ],
+                    likes: 245
                 },
                 {
                     title: 'Kirby & the Amazing Mirror',
@@ -117,10 +124,12 @@ class Landing extends React.Component {
                     rating: 3,
                     date: '2004',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Trash Game',
                         'Game would have been better if there wasnt already an amazing kirby game for gba'
-                    ]
+                    ],
+                    likes: 344
                 },
                 {   
                     title: 'Fire Emblem',
@@ -129,12 +138,14 @@ class Landing extends React.Component {
                     rating: 4.5,
                     date: '2003',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Lyn tho',
                         'Hector tho?',
                         'ELIWOOD THO?',
                         '^^plebs'
-                    ]
+                    ],
+                    likes: 290
                 },
                 {
                     title: 'Kingdom Hearts Chain of Memories',
@@ -143,9 +154,11 @@ class Landing extends React.Component {
                     rating: 3.5,
                     date: '2004',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Whens KH3?'
-                    ]
+                    ],
+                    likes: 200
                 },
                 {
                     title: 'Sonic Battle',
@@ -154,10 +167,12 @@ class Landing extends React.Component {
                     rating: 4,
                     date: '2003',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Game sucks and doesnt deserve anything above 2',
                         'I quit playing this game after 10 minutes'
-                    ]
+                    ],
+                    likes: 240
                 },
                 {
                     title: 'Sonic Advance 2',
@@ -166,9 +181,29 @@ class Landing extends React.Component {
                     rating: 3,
                     date: '2003',
                     user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
                     comments: [
                         'Lol you are giving a rating for a game you have never played'
+                    ],
+                    likes: 300
+                }
+            ],
+
+            lists: [
+                {
+                    user: 'adogdog',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
+                    firstImage: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/FinalFantasyTacticsAdvanceGBACoverArtUS.jpg/220px-FinalFantasyTacticsAdvanceGBACoverArtUS.jpg',
+                    secondImage: 'https://upload.wikimedia.org/wikipedia/en/8/88/Sonic_Battle_Coverart.png',
+                    thirdImage: 'https://vignette.wikia.nocookie.net/mario/images/2/23/Mario_%26_Luigi_Superstar_Saga_-_North_American_Cover.png/revision/latest?cb=20120622213536',
+                    fourthImage: 'https://upload.wikimedia.org/wikipedia/en/a/a7/Pokemon_LeafGreen_box.jpg',
+                    fifthImage: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Metroid_Fusion_box.jpg/220px-Metroid_Fusion_box.jpg',
+                    likes: '2,770',
+                    description: 'Games in which I treasure as part of my early childhood and will always be some of my favorite games of all time. Every game on the list is objectively better than phils favorite games',
+                    comments: [
+                        'lol trash list'
                     ]
+
                 }
             ]
         }
@@ -270,7 +305,7 @@ class Landing extends React.Component {
     renderBottomCards = () => {
         return (
             <div className='bottom-left-container'>
-                <div>
+                <div className='bottom-left-title'>
                     <h3>POPULAR REVIEWS THIS WEEK</h3>
                     <p>More</p>
                 </div>
@@ -285,6 +320,8 @@ class Landing extends React.Component {
                             likes={review.likes}
                             date={review.date}
                             commentCount={review.comments.length}
+                            user={review.user}
+                            src2={review.userImage}
                         />
                     )
                 })}
@@ -325,6 +362,28 @@ class Landing extends React.Component {
             )
     }
 
+    renderLists = () => {
+        return (
+            <Lists >
+            {this.state.lists.map(list =>{
+                return (
+                    <ListsImage 
+                        key={list.id}
+                        firstImage={list.firstImage}
+                        secondImage={list.secondImage}
+                        thirdImage={list.thirdImage}
+                        fourthImage={list.fourthImage}
+                        fifthImage={list.fifthImage}
+                        description={list.description} 
+                        user={list.user}
+                        userImage={list.userImage}
+                    />
+                )
+            })}
+            </Lists>
+        )
+    }
+
     render() {
         return (
             <>
@@ -357,6 +416,7 @@ class Landing extends React.Component {
                         {this.renderReviewed()}
                     </div>
                     {this.renderBottomCards()}
+                    {this.renderLists()}
                 </div>
             </>
         )

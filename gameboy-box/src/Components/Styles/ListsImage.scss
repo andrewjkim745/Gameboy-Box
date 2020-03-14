@@ -1,0 +1,66 @@
+.five-image-container {
+    display: flex;
+    margin-top: 20px;
+    width: 60%;
+    &:hover {
+        border: 2px solid lightgreen;
+
+    }
+}
+
+.five-image-container div {
+    position: relative;
+    box-shadow: 5px 0 7px #000;
+}
+
+.five-image-container img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.firstImage {
+    z-index: 5;
+}
+
+.secondImage {
+    z-index: 4;
+    left: -50px;
+}
+
+.thirdImage {
+    z-index: 3;
+    left: -100px;
+}
+
+.fourthImage{
+    z-index: 2;
+    left: -150px;
+}
+
+.fifthImage {
+    z-index: 1;
+    left: -200px;
+}
+
+.lists-user-container {
+    display: flex;
+    flex-direction: column;
+}
+.lists-user-container p {
+    color: #fff;
+}
+
+.lists-user-container div {
+    color: #abc;
+}
+
+.user-image-container {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.user-image-container img {
+    max-width: 30px;
+}
