@@ -9,6 +9,8 @@ import BottomLeftCard from './PageComponents/BottomLeftCard'
 import Lists from './PageComponents/Lists'
 import './Styles/NavBar.scss'
 import ListsImage from './PageComponents/ListsImage'
+import RecentNews from './PageComponents/RecentNews'
+import RecentNewsCard from './PageComponents/RecentNewsCard'
 
 
 
@@ -204,6 +206,40 @@ class Landing extends React.Component {
                         'lol trash list'
                     ]
 
+                },
+                {
+                    user: 'philowe2001',
+                    userImage: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
+                    firstImage: 'https://upload.wikimedia.org/wikipedia/en/1/1d/KingdomHeartsCoMCover_.jpg',
+                    secondImage: 'https://images-na.ssl-images-amazon.com/images/I/61-84qWXw2L.jpg',
+                    thirdImage: 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a8/Sonic_Advance_Coverart.png/220px-Sonic_Advance_Coverart.png',
+                    fourthImage: 'https://images-na.ssl-images-amazon.com/images/I/61Lgrv%2BnFmL.jpg',
+                    fifthImage: 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Dragon_Ball_Z_Supersonic_Warriors.jpg/220px-Dragon_Ball_Z_Supersonic_Warriors.jpg',
+                    likes: '0',
+                    description: 'Games that I think phil has played or enjoyed in the past',
+                    comments: [
+                        'plz come back phil',
+                        'I need the backend',
+                        ':('
+                    ]
+
+                }
+            ],
+            recentNews: [
+                {
+                    image: 'https://vignette.wikia.nocookie.net/pokemon-fan-game/images/e/e6/Pokemon_Advanced_Adventure.jpg/revision/latest/scale-to-width-down/340?cb=20170930224625',
+                    romName: 'Pokemon Advanced Adventure',
+                    description: 'A LeafGreen based ROM hack which features a new region to explore, a new hero, new pokemon sprites, no HMs and a new Storyline'
+                },
+                {
+                    image: 'https://images.lukiegames.com/t_300e2/assets/images/GBA/BoxScans/GBA_Sonic_Advance_3_Box.jpg',
+                    romName: 'Dr Robotnik in Sonic',
+                    description: 'Finally you can play as Doctor Eggman in the classic first Sonic game.',
+                },
+                {
+                    image: 'https://cache.downloadroms.io/static/8c1873d0700a4150e0a2629fdd4a9eeee3f741ed/image.jpg',
+                    romName: 'Pokemon Kaizo Emerald',
+                    description: 'A significantly more challenging version of Pokemon Emerald. Postgame is heavily changed, with the addition of new Kaizo Challenges and overall a much more challenging experience.'
                 }
             ]
         }
@@ -384,6 +420,23 @@ class Landing extends React.Component {
         )
     }
 
+    renderRecentNews = () => {
+        return (
+            <RecentNews>
+                {this.state.recentNews.map(news => {
+                    return (
+                        <RecentNewsCard
+                            key={news.id}
+                            image={news.image}
+                            romName={news.romName}
+                            description={news.description}
+                        />
+                    )
+                })}
+            </RecentNews>
+        )
+    }
+
     render() {
         return (
             <>
@@ -417,6 +470,7 @@ class Landing extends React.Component {
                     </div>
                     {this.renderBottomCards()}
                     {this.renderLists()}
+                    {this.renderRecentNews()}
                 </div>
             </>
         )

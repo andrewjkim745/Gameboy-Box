@@ -1,0 +1,20 @@
+.rom-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.rom-container p {
+    color: #99AABB;
+}
+
+.recentNewsCardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 25%
+}
+.romImage-container img {
+    max-width: 300px;
+    max-height:300px;
+}
