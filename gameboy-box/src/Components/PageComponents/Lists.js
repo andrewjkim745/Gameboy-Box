@@ -12,7 +12,7 @@ const Lists = (props) => {
                 <h2>POPULAR LISTS</h2>
                 <p>MORE</p>
             </div>
-            <div>
+            <div className='parent-container'>
                 {props.children}
             </div>
         </div>

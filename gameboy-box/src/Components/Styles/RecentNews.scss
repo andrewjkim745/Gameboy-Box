@@ -1,0 +1,20 @@
+.roms-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.recentNewsTitle {
+    display: flex;
+    width: 98%;
+    justify-content: space-between;
+    border-bottom: 1px solid #456;
+}
+
+.recentNewsTitle p {
+    color: #456;
+}
+
+.recent-news-container {
+    width: 90%;
+}
