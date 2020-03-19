@@ -11,6 +11,8 @@ import './Styles/NavBar.scss'
 import ListsImage from './PageComponents/ListsImage'
 import RecentNews from './PageComponents/RecentNews'
 import RecentNewsCard from './PageComponents/RecentNewsCard'
+import PopReviewersCard from './PageComponents/PopReviewersCard'
+import Reviewers from './PageComponents/Reviewers'
 
 
 
@@ -241,6 +243,20 @@ class Landing extends React.Component {
                     romName: 'Pokemon Kaizo Emerald',
                     description: 'A significantly more challenging version of Pokemon Emerald. Postgame is heavily changed, with the addition of new Kaizo Challenges and overall a much more challenging experience.'
                 }
+            ],
+            Reviewers: [
+                {
+                    username: 'adogdog',
+                    image: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
+                    games: '9',
+                    reviews: '9'
+                },
+                {
+                    username: 'philowe2001',
+                    image: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
+                    games: '0',
+                    reviews: '0',
+                }
             ]
         }
     }
@@ -437,6 +453,24 @@ class Landing extends React.Component {
         )
     }
 
+    renderPopReviewers = () => {
+        return (
+            <Reviewers>
+                {this.state.Reviewers.map(reviewer => {
+                    return (
+                        <PopReviewersCard
+                            key={reviewer.id}
+                            image={reviewer.image}
+                            username={reviewer.username}
+                            reviews={reviewer.reviews}
+                            games={reviewer.games}
+                        />
+                    )
+                })}
+            </Reviewers>
+        )
+    }
+
     render() {
         return (
             <>
@@ -469,8 +503,13 @@ class Landing extends React.Component {
                         {this.renderReviewed()}
                     </div>
                     {this.renderBottomCards()}
-                    {this.renderLists()}
+                    <div className='flex-container'>
+                        {this.renderLists()}
+                        {this.renderPopReviewers()}
+                    </div>
+                    
                     {this.renderRecentNews()}
+
                 </div>
             </>
         )

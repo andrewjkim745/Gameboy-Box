@@ -1,0 +1,25 @@
+.popReviewersContainer {
+    width: 25%;
+}
+
+
+.popReviewersTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #678;
+}
+
+.popReviewersTitle p {
+    color: #678;
+}
+
+.popReviewersTitle h3 {
+    color: #9ab;
+}
+
+.popReviewersInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

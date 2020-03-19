@@ -20,6 +20,12 @@
     box-shadow: 100px 50px 50px 0 #2c3440 inset, -100px -350px 50px 0px #2c3440 inset;
 }
 
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 50px;
+}
+
 .highlights-container {
     display: flex;
     flex-wrap: wrap;
