@@ -11,6 +11,8 @@ import './Styles/NavBar.scss'
 import ListsImage from './PageComponents/ListsImage'
 import RecentNews from './PageComponents/RecentNews'
 import RecentNewsCard from './PageComponents/RecentNewsCard'
+import PopReviewersCard from './PageComponents/PopReviewersCard'
+import Reviewers from './PageComponents/Reviewers'
 
 
 
@@ -32,12 +34,27 @@ class Landing extends React.Component {
                     image: 'https://www.zeldadungeon.net/wiki/images/2/25/Minish-Cap-Cover.jpg',
                     votes: 19345,
                     rating: 5670
+                },
+                {
+                    image: 'https://images-na.ssl-images-amazon.com/images/I/51yZcsELkCL.jpg',
+                    votes: 99998,
+                    rating: 9999
+                },
+                {
+                    image: 'https://i.etsystatic.com/10309132/r/il/3560a9/1250048004/il_570xN.1250048004_djvt.jpg',
+                    votes: 11112,
+                    rating: 15426
+                },
+                {
+                    image: 'https://images.lukiegames.com/t_300e2/assets/images/GBA/BoxScans/GBA_Pokemon_Fire_Red_Box.jpg',
+                    votes: 910,
+                    rating: 2562
                 }
             ],
             highlights: [
-                {   
+                {
                     image: 'https://i.imgur.com/Z1l5Hul.png',
-                    text: "Keep Track of every game you've ever played (or just start from the day you join)" 
+                    text: "Keep Track of every game you've ever played (or just start from the day you join)"
                 },
                 {
                     image: 'https://i.imgur.com/tSF1Ujf.png',
@@ -61,7 +78,7 @@ class Landing extends React.Component {
                 }
             ],
             Reviewed: [
-                {   
+                {
                     title: 'Pokemon Leaf Green',
                     image: 'https://upload.wikimedia.org/wikipedia/en/a/a7/Pokemon_LeafGreen_box.jpg',
                     description: 'Honestly a great remake and this game makes me think that pokemon yellow, red and blue didnt need the pokemon lets go series.',
@@ -104,7 +121,7 @@ class Landing extends React.Component {
                     ],
                     likes: 151
                 },
-                {  
+                {
                     title: 'Final Fantasy Tactics Advance',
                     image: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/FinalFantasyTacticsAdvanceGBACoverArtUS.jpg/220px-FinalFantasyTacticsAdvanceGBACoverArtUS.jpg',
                     description: 'I had a lot of trouble with this game as a kid and the story really captivated me. A group of kids being transported into a fantasy world where their lives are so much better and more interesting? Literally my dream as a kid. The game has a main quest which is about 15-20 hours long if you are a decent player, and tons of extra content that extends the total gametime to at least 40-50 hours.',
@@ -133,7 +150,7 @@ class Landing extends React.Component {
                     ],
                     likes: 344
                 },
-                {   
+                {
                     title: 'Fire Emblem',
                     image: 'https://miro.medium.com/max/2154/1*Yi-lfOw522jn9FJLnwqHiA.jpeg',
                     description: 'My first fire emblem was the roy game, but this game is definitely my favorite gba release. Its very basic fire emblem gameplay and thats all I wanted as a kid.',
@@ -241,6 +258,20 @@ class Landing extends React.Component {
                     romName: 'Pokemon Kaizo Emerald',
                     description: 'A significantly more challenging version of Pokemon Emerald. Postgame is heavily changed, with the addition of new Kaizo Challenges and overall a much more challenging experience.'
                 }
+            ],
+            Reviewers: [
+                {
+                    username: 'adogdog',
+                    image: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
+                    games: '9',
+                    reviews: '9'
+                },
+                {
+                    username: 'philowe2001',
+                    image: 'https://mvp.microsoft.com/en-us/PublicProfile/Photo/5003148',
+                    games: '0',
+                    reviews: '0',
+                }
             ]
         }
     }
@@ -254,10 +285,10 @@ class Landing extends React.Component {
     }
 
     handleResize = (e) => {
-            this.setState({
-                windowSize: window.innerWidth
-            })
-        }
+        this.setState({
+            windowSize: window.innerWidth
+        })
+    }
 
     handleMouseHover = () => {
         this.setState({
@@ -273,26 +304,26 @@ class Landing extends React.Component {
 
 
     renderNav = () => {
-            return (
+        return (
             <div className='nav-container'>
                 <div className='nav-bar'>
-                <div className='title'>
-                <img className='logo' src='https://i.imgur.com/PdBoInC.png'></img>
-                <h2>Gameboyboxd</h2>
-                </div>
-                <div className='nav-links'>
-                    <p>SIGN IN</p>
-                    <p>CREATE ACCOUNT</p>
-                    <p>FILMS</p>
-                    <p>LISTS</p>
-                    <p>PEOPLE</p>
-                    <div className='search-bar'><input></input><FiSearch/></div>
-                </div>
+                    <div className='title'>
+                        <img className='logo' src='https://i.imgur.com/PdBoInC.png'></img>
+                        <h2>Gameboyboxd</h2>
+                    </div>
+                    <div className='nav-links'>
+                        <p>SIGN IN</p>
+                        <p>CREATE ACCOUNT</p>
+                        <p>FILMS</p>
+                        <p>LISTS</p>
+                        <p>PEOPLE</p>
+                        <div className='search-bar'><input></input><FiSearch /></div>
+                    </div>
                 </div>
             </div>
-            )
-        }
-    
+        )
+    }
+
     renderCards = () => {
         return (
             <div className='card-carousel'>
@@ -302,7 +333,7 @@ class Landing extends React.Component {
                             key={stat.id}
                             image={stat.image}
                             onMouseEnter={() => this.setState({ hover: true })}
-                            onMouseLeave={() => this.setState({ hover: false})}
+                            onMouseLeave={() => this.setState({ hover: false })}
                             renderVotesRatings={this.renderVotesRatings()}
                             rating={stat.rating}
                             votes={stat.votes}
@@ -317,7 +348,7 @@ class Landing extends React.Component {
         return (
             <div>
                 <h2>Gameboxd</h2>
-                <IoIosMenu/>
+                <IoIosMenu />
             </div>
         )
     }
@@ -371,7 +402,7 @@ class Landing extends React.Component {
                 {this.state.Reviewed.map(review => {
                     return (
                         <ReviewedCard
-                        src={review.image}
+                            src={review.image}
                         />
                     )
                 })}
@@ -401,21 +432,21 @@ class Landing extends React.Component {
     renderLists = () => {
         return (
             <Lists >
-            {this.state.lists.map(list =>{
-                return (
-                    <ListsImage 
-                        key={list.id}
-                        firstImage={list.firstImage}
-                        secondImage={list.secondImage}
-                        thirdImage={list.thirdImage}
-                        fourthImage={list.fourthImage}
-                        fifthImage={list.fifthImage}
-                        description={list.description} 
-                        user={list.user}
-                        userImage={list.userImage}
-                    />
-                )
-            })}
+                {this.state.lists.map(list => {
+                    return (
+                        <ListsImage
+                            key={list.id}
+                            firstImage={list.firstImage}
+                            secondImage={list.secondImage}
+                            thirdImage={list.thirdImage}
+                            fourthImage={list.fourthImage}
+                            fifthImage={list.fifthImage}
+                            description={list.description}
+                            user={list.user}
+                            userImage={list.userImage}
+                        />
+                    )
+                })}
             </Lists>
         )
     }
@@ -437,10 +468,28 @@ class Landing extends React.Component {
         )
     }
 
+    renderPopReviewers = () => {
+        return (
+            <Reviewers>
+                {this.state.Reviewers.map(reviewer => {
+                    return (
+                        <PopReviewersCard
+                            key={reviewer.id}
+                            image={reviewer.image}
+                            username={reviewer.username}
+                            reviews={reviewer.reviews}
+                            games={reviewer.games}
+                        />
+                    )
+                })}
+            </Reviewers>
+        )
+    }
+
     render() {
         return (
             <>
-            {this.state.windowSize < 425 ? this.renderHambuger() : this.renderNav()}
+                {this.state.windowSize < 425 ? this.renderHambuger() : this.renderNav()}
                 <div className='backdrop-container'>
                     <div className='backdrop'></div>
                 </div>
@@ -458,8 +507,8 @@ class Landing extends React.Component {
                     </div>
                     {this.renderCards()}
                     <div className='highlights-parent-container'>
-                    <h3>GAMEBOYBOXD LETS YOU...</h3>
-                    {this.renderHighlights()}
+                        <h3>GAMEBOYBOXD LETS YOU...</h3>
+                        {this.renderHighlights()}
                     </div>
                     <div className='reviewed-parent-container'>
                         <div className='reviewed-top-container'>
@@ -468,8 +517,13 @@ class Landing extends React.Component {
                         </div>
                         {this.renderReviewed()}
                     </div>
-                    {this.renderBottomCards()}
-                    {this.renderLists()}
+                    <div className='outer-flex-container'>
+                        {this.renderBottomCards()}
+                        <div className='flex-container'>
+                            {this.renderLists()}
+                            {this.renderPopReviewers()}
+                        </div>
+                    </div>
                     {this.renderRecentNews()}
                 </div>
             </>

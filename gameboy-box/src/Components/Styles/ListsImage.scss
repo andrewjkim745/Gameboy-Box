@@ -1,9 +1,9 @@
 .five-image-container {
     display: flex;
     margin-top: 20px;
+    width: 300px;
     &:hover {
         border: 3px solid lightgreen;
-
     }
 }
 
@@ -13,7 +13,7 @@
 }
 
 .five-image-container img {
-    max-width: 150px;
+    max-width: 100px;
     max-height: 150px;
 }
 
@@ -56,10 +56,9 @@
 .user-image-container {
     display: flex;
     align-items: center;
-    width: 30%;
-    justify-content: space-between;
 }
 
 .user-image-container img {
     max-width: 30px;
+    margin-right: 1rem;
 }

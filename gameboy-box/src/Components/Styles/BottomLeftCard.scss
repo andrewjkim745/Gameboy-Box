@@ -1,7 +1,6 @@
 .title-date {
     display: flex;
     justify-content: space-between;
-    width: 40%;
 }
 
 .title-date h4 {
@@ -15,8 +14,7 @@
 
 .user-rating {
     display: flex;
-    justify-content: space-between;
-    width: 25%;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -27,10 +25,21 @@
     color: #89a;
 }
 
+.user-rating div {
+    margin-right: 10px;
+}
+
+.user-rating h5 {
+    margin-right: 10px;
+}
+
+.user-rating svg {
+    margin-right: 10px;
+}
+
 .description {
     display: flex;
     flex-wrap: wrap;
-    width: 60%;
 }
 .description p {
     color: #89a;
@@ -39,8 +48,10 @@
 .favorites {
     display: flex;
     align-items: center;
-    width: 10%;
-    justify-content: space-between;
+    justify-content: flex-start;
+}
+.favorites svg {
+    margin-right: 1rem;
 }
 
 .favorites p {
