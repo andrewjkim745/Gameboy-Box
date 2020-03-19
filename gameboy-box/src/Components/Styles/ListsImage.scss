@@ -1,9 +1,9 @@
 .five-image-container {
     display: flex;
     margin-top: 20px;
+    width: 300px;
     &:hover {
         border: 3px solid lightgreen;
-
     }
 }
 
