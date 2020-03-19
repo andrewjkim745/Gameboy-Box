@@ -3,13 +3,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0px 2rem;
+    margin: 0px .5rem;
     box-shadow: inset 0 0 0 1px rgba(221, 238, 255, .35)
 }
 
 .card-image {
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 200px;
+    max-height: 220px;
 }
 
 .card:hover {

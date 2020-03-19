@@ -20,10 +20,15 @@
     box-shadow: 100px 50px 50px 0 #2c3440 inset, -100px -350px 50px 0px #2c3440 inset;
 }
 
+.outer-flex-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .flex-container {
     display: flex;
-    justify-content: space-between;
-    margin: 0px 50px;
+    flex-direction: column;
+    width: 30%;
 }
 
 .highlights-container {
@@ -83,7 +88,7 @@ h3 {
     justify-content: center;
     align-items: center;
     position: absolute;
-    padding: 1rem 3.5rem;
+    padding: .5rem 1rem;
     background-color: rgba(black,.7);
     color: white;
     animation: fadeInOpacity;
@@ -120,7 +125,9 @@ h3 {
 .bottom-left-container {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    align-self: flex-start;
+    width: 60%;
+    margin-left: 1.5rem;
 }
 
 .bottom-card-container {
