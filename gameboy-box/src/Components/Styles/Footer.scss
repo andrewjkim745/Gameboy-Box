@@ -1,0 +1,40 @@
+.footerContainer {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0px;
+    background-color: #141414;
+    width: 100%;
+}
+
+.footerContainer p {
+    color: #def;
+}
+
+.siteLinks {
+    display: flex;
+    justify-content: space-evenly;
+    width: 75%;
+}
+
+.footerRow {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.socialMediaLinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
+}
+
+.socialMediaLinks p {
+}
+
+.socialMediaLinks img{
+    max-height: 20px;
+    max-width: 20px;
+}

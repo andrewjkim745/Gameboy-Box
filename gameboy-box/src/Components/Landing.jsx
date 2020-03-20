@@ -13,7 +13,7 @@ import RecentNews from './PageComponents/RecentNews'
 import RecentNewsCard from './PageComponents/RecentNewsCard'
 import PopReviewersCard from './PageComponents/PopReviewersCard'
 import Reviewers from './PageComponents/Reviewers'
-
+import Footer from './Footer'
 
 
 class Landing extends React.Component {
@@ -124,7 +124,7 @@ class Landing extends React.Component {
                 {
                     title: 'Final Fantasy Tactics Advance',
                     image: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/FinalFantasyTacticsAdvanceGBACoverArtUS.jpg/220px-FinalFantasyTacticsAdvanceGBACoverArtUS.jpg',
-                    description: 'I had a lot of trouble with this game as a kid and the story really captivated me. A group of kids being transported into a fantasy world where their lives are so much better and more interesting? Literally my dream as a kid. The game has a main quest which is about 15-20 hours long if you are a decent player, and tons of extra content that extends the total gametime to at least 40-50 hours.',
+                    description: 'I had a lot of trouble with this game as a kid and the story really captivated me. A group of kids being transported into a fantasy world where their lives are so much better and more interesting? Literally my dream as a kid. The game has a main quest which is about 15-20 hours long, if you are a decent player, and tons of extra content that extends the total gametime to at least 40-50 hours.',
                     rating: 5,
                     date: '2003',
                     user: 'adogdog',
@@ -169,7 +169,7 @@ class Landing extends React.Component {
                 {
                     title: 'Kingdom Hearts Chain of Memories',
                     image: 'https://upload.wikimedia.org/wikipedia/en/1/1d/KingdomHeartsCoMCover_.jpg',
-                    description: 'I love KH but didnt love how grindy this game felt as a kid. The battle system was cool and unique, but by the end of the game I didnt see a reason to not just make a deck with only 9s and a few 0s. Also, This game was the catalyst for making the kh storyline 3x as confusing.',
+                    description: 'I love KH but didnt love how grindy this game felt as a kid. The battle system was cool and unique, but by the end of the game I didnt see a reason to not make a deck with only 9s and a few 0s. Also, This game was the catalyst for making the kh storyline 3x as confusing.',
                     rating: 3.5,
                     date: '2004',
                     user: 'adogdog',
@@ -182,7 +182,7 @@ class Landing extends React.Component {
                 {
                     title: 'Sonic Battle',
                     image: 'https://upload.wikimedia.org/wikipedia/en/8/88/Sonic_Battle_Coverart.png',
-                    description: 'Technically my first "fighting game". Could be nostalgia goggles but I liked how there was an actual combo system that felt fun to implement with different characters. Characters also had different attributes and abilities that made them feel unique. The story was decent and had a lot of junk and extra material, but overall I felt the story was interesting and the ending almost made me cry as a kid',
+                    description: 'Technically my first "fighting game". Could be nostalgia goggles but I liked how there was an actual combo system that felt fun to implement with different characters. Characters also had different attributes and abilities that made them feel unique. The story was decent and had a lot of junk and extra material, but overall I felt it was interesting enough.',
                     rating: 4,
                     date: '2003',
                     user: 'adogdog',
@@ -256,7 +256,7 @@ class Landing extends React.Component {
                 {
                     image: 'https://cache.downloadroms.io/static/8c1873d0700a4150e0a2629fdd4a9eeee3f741ed/image.jpg',
                     romName: 'Pokemon Kaizo Emerald',
-                    description: 'A significantly more challenging version of Pokemon Emerald. Postgame is heavily changed, with the addition of new Kaizo Challenges and overall a much more challenging experience.'
+                    description: 'A significantly more challenging version of Pokemon Emerald. Postgame is heavily changed, with the addition of new Kaizo Challenges and an overall more fulfilling experience.'
                 }
             ],
             Reviewers: [
@@ -525,6 +525,7 @@ class Landing extends React.Component {
                         </div>
                     </div>
                     {this.renderRecentNews()}
+                    <Footer/>
                 </div>
             </>
         )
