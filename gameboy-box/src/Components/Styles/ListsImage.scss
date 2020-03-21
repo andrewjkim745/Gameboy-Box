@@ -3,7 +3,8 @@
     margin-top: 20px;
     width: 300px;
     &:hover {
-        border: 3px solid lightgreen;
+        box-shadow: 0 0 20px lightgreen;
+        box-sizing: border-box;
     }
 }
 

@@ -1,24 +1,3 @@
-.backdrop-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-
-.backdrop {
-    background-image: url('https://i.ytimg.com/vi/l_myXsUmhok/maxresdefault.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    width: 65%;
-    height: 100%;
-    top: 20px;
-    z-index: 0;
-    box-shadow: 100px 50px 50px 0 #2c3440 inset, -100px -350px 50px 0px #2c3440 inset;
-}
 
 .outer-flex-container {
     display: flex;
