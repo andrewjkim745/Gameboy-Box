@@ -50,10 +50,18 @@
 
 .search-bar input {
     margin-left: 2rem;
-    background-color: hsla(0, 0%, 100%, .25);
+    // background-color: hsla(0, 0%, 100%, .25);
     box-shadow: none;
     border-radius: 1rem;
-    padding-left: 1rem;
+    padding-left: 1.2rem;
+    margin-right: 1rem;
+}
+
+.search-bar svg {
+    position: relative;
+    left: -35px;
+    z-index: 99999;
+    color: black;
 }
 
 .search-bar input:hover {
