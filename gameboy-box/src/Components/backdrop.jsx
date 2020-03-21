@@ -2,7 +2,7 @@ import React from 'react'
 import './Styles/backdrop.scss'
 
 
-const backdrop = () => {
+const Backdrop = () => {
     return (
         <div className='backdrop-container'>
             <div className='backdrop'></div>
@@ -11,4 +11,4 @@ const backdrop = () => {
     )
 }
 
-export default backdrop
+export default Backdrop
