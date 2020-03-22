@@ -4,10 +4,12 @@ import Landing from '../Landing'
 
 
 
-export const Routes = () => {
+const Routes = () => {
     return (
         <Switch>
             <Route exact path='/' component={Landing}/>
         </Switch>
     )
 }
+
+export default Routes

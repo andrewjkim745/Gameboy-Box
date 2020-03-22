@@ -3,8 +3,6 @@ import './Styles/Landing.scss'
 import CardItem from './PageComponents/CardItem'
 import Highlights from './PageComponents/Highlights'
 import ReviewedCard from './PageComponents/ReviewedCard'
-import { IoIosMenu } from 'react-icons/io'
-import { FiSearch } from 'react-icons/fi'
 import BottomLeftCard from './PageComponents/BottomLeftCard'
 import Lists from './PageComponents/Lists'
 import './Styles/NavBar.scss'
@@ -276,20 +274,6 @@ class Landing extends React.Component {
         }
     }
 
-    componentDidMount = () => {
-        window.addEventListener('Resize', this.handleResize())
-        console.log(this.state.windowSize)
-    }
-    componentWillUnmount = () => {
-        window.removeEventListener('Resize', this.handleResize())
-    }
-
-    handleResize = (e) => {
-        this.setState({
-            windowSize: window.innerWidth
-        })
-    }
-
     handleMouseHover = () => {
         this.setState({
             hover: !this.state.hover
@@ -320,15 +304,6 @@ class Landing extends React.Component {
                         />
                     );
                 })}
-            </div>
-        )
-    }
-
-    renderHambuger = () => {
-        return (
-            <div>
-                <h2>Gameboxd</h2>
-                <IoIosMenu />
             </div>
         )
     }
@@ -469,7 +444,6 @@ class Landing extends React.Component {
     render() {
         return (
             <>
-                {this.state.windowSize < 425 ? this.renderHambuger() : this.renderNav()}
                 <div className='landing-quote'>
                     <h2>Track Games you've played</h2>
                     <br></br>
@@ -502,7 +476,6 @@ class Landing extends React.Component {
                         </div>
                     </div>
                     {this.renderRecentNews()}
-                    <Footer/>
                 </div>
             </>
         )

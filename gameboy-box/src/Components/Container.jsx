@@ -1,12 +1,12 @@
 import React from 'react'
 import Routes from './Routes'
-import Navbar from './NavBar'
+import NavBar from './NavBar'
 import Backdrop from './Backdrop'
 import Footer from './Footer'
 
 
 
-export default class Container extends Component {
+export default class Container extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,9 +19,9 @@ export default class Container extends Component {
     render() {
         return (
             <Backdrop>
-                <Navbar/>
+                {/* <NavBar/> */}
                 <Routes/>
-                <Footer/>
+                {/* <Footer/> */}
             </Backdrop>
         )
     }
