@@ -5,7 +5,7 @@ import GameDetails from '../GameDetails'
 
 
 
-const Routes = (props) => {
+const Routes = () => {
     return (
         <Switch>
             <Route exact path='/' component={Landing}/>
