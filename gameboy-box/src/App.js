@@ -8,9 +8,9 @@ import Container from './Components/Container'
 function App() {
   return (
     <>
-    <NavBar/>
+    {/* <NavBar/> */}
     <Container/>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   )
 }

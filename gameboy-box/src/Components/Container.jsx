@@ -19,9 +19,11 @@ export default class Container extends React.Component {
     render() {
         return (
             <Backdrop>
-                {/* <NavBar/> */}
+                <NavBar/>
                 <Routes/>
-                {/* <Footer/> */}
+                {/* <div className='footer-container'> */}
+                <Footer/>
+                {/* </div> */}
             </Backdrop>
         )
     }
