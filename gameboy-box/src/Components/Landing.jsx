@@ -341,7 +341,7 @@ class Landing extends React.Component {
                 </div>
                 {this.state.Reviewed.map(review => {
                     return (
-                        <div key={review.id}>
+                        <>
                         <NavLink exact to={{ 
                             pathname: `/games/${review.id}`,
                             game: {
@@ -363,7 +363,7 @@ class Landing extends React.Component {
                             src2={review.userImage}
                         />
                         </NavLink>
-                        </div>
+                        </>
                     )
                 })}
             </div>
@@ -469,7 +469,7 @@ class Landing extends React.Component {
                     <h2>Save games you want to play</h2>
                     <br></br>
                     <h2>Tell your friends what's good.</h2>
-                    <a>GET STARTED - IT'S FREE</a>
+                    <a className='getStarted'>GET STARTED - IT'S FREE</a>
                     <div className='platforms'>
                         <p className='social'>The social network for classic GBA lovers. Also available on </p>
                         <img src='https://i.imgur.com/6eO3w1V.png'></img>
