@@ -21,7 +21,7 @@ export default class AboutTabs extends React.Component {
     render() {
         return (
             <div onClick={this.onClick} className={this.state.clicked ? 'selected' : 'notSelected'}>
-                <h3>{props.title}</h3>
+                <h3 className='tabTitle'>{props.title}</h3>
             </div>
         )
     }

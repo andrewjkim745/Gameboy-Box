@@ -1,0 +1,16 @@
+.tabTitle {
+    color: #556677;
+    &:hover {
+        color: lightblue;
+    }
+}
+
+.selected {
+    padding: 0 1rem;
+    border-right: 1px solid lightgray;
+}
+
+.notSelected {
+    padding: 0 1rem;
+    border-right: 1px solid black;
+}
