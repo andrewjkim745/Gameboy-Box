@@ -22,27 +22,32 @@ class Landing extends React.Component {
             windowSize: 0,
             highlights: false,
             stats: [
-                {
+                {   
+                    id: 1,
                     image: 'https://cdn.bulbagarden.net/upload/thumb/6/62/Sapphire_EN_boxart.png/250px-Sapphire_EN_boxart.png',
                     votes: 10745,
                     rating: 1601
                 },
                 {
+                    id: 2,
                     image: 'https://www.zeldadungeon.net/wiki/images/2/25/Minish-Cap-Cover.jpg',
                     votes: 19345,
                     rating: 5670
                 },
                 {
+                    id: 3,
                     image: 'https://images-na.ssl-images-amazon.com/images/I/51yZcsELkCL.jpg',
                     votes: 99998,
                     rating: 9999
                 },
                 {
+                    id: 4,
                     image: 'https://i.etsystatic.com/10309132/r/il/3560a9/1250048004/il_570xN.1250048004_djvt.jpg',
                     votes: 11112,
                     rating: 15426
                 },
                 {
+                    id: 5,
                     image: 'https://images.lukiegames.com/t_300e2/assets/images/GBA/BoxScans/GBA_Pokemon_Fire_Red_Box.jpg',
                     votes: 910,
                     rating: 2562
@@ -294,13 +299,19 @@ class Landing extends React.Component {
         })
     }
 
-
-
     renderCards = () => {
         return (
             <div className='card-carousel'>
                 {this.state.stats.map(stat => {
                     return (
+                        <>
+                        <NavLink exact to={{ 
+                            pathname: `/games/${stat.id}`,
+                            game: {
+                                image: stat.image,
+                            }
+                        }}
+                            className='navLink'>
                         <CardItem
                             key={stat.id}
                             image={stat.image}
@@ -310,6 +321,8 @@ class Landing extends React.Component {
                             rating={stat.rating}
                             votes={stat.votes}
                         />
+                        </NavLink>
+                        </>
                     );
                 })}
             </div>

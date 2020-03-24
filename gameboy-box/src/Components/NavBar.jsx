@@ -2,6 +2,7 @@ import React from 'react'
 import './Styles/NavBar.scss'
 import { IoIosMenu } from 'react-icons/io'
 import { FiSearch } from 'react-icons/fi'
+import { NavLink } from 'react-router-dom'
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -52,7 +53,9 @@ class NavBar extends React.Component {
             <div className='nav-container' >
                 <div className='nav-bar'>
                     <div className='title'>
+                        <NavLink exact to='/' className='navLink'>
                         <img className='logo' src='https://i.imgur.com/PdBoInC.png'></img>
+                        </NavLink>
                         <h2>Gameboyboxd</h2>
                     </div>
                     {this.state.windowSize < 425 ? this.renderMobileNav() : this.renderNav()}
