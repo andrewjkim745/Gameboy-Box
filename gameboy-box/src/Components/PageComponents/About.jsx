@@ -117,60 +117,73 @@ export default class About extends React.Component {
     }
 
     renderFrequentquestions = () => {
+        return (
         <div className={this.state.frequentClicked ? 'flexContainer' : 'displayNone'}>
             <div className='frequentTitle'>
                 <h3>ABOUT GAMEBOXD</h3>
             </div>
-            
         </div>
+        )
     }
 
     renderMembership = () => {
+        return (
         <div className={this.state.membershipClicked ? 'flexContainer' : 'displayNone'}>
             <div className='proMembership'>
                 <h3>Pro membership</h3>
             </div>
         </div>
+        )
     }
 
     renderGameData = () => {
+        return (
         <div className={this.state.filmDataClicked ? 'flexContainer' : 'displayNone'}>
             <div className='filmData'>
                 <h3>Game data</h3>
             </div>
         </div>
+        )
     }
 
     renderImportData = () => {
+        return (
         <div className={this.state.importClicked ? 'flexContainer' : 'displayNone'}>
             <div className='importData'>
                 <h3>Import data</h3>
             </div>
         </div>
+        )
     }
 
     renderMigrating = () => {
+        return (
         <div className={this.state.migratingClicked ? 'flexContainer' : 'displayNone'}>
             <div className='migratingTitle'>
                 <h3>Migrating from IMDb</h3>
             </div>
         </div>
+        )
     }
 
     renderGameboxd = () => {
+        return (
         <div className={this.state.gameboxdClicked ? 'flexContainer' : 'displayNone'}>
             <div className='gameboxdTitle'>
                 <h3>Gameboxd Brand</h3>
             </div>
         </div>
+        )
     }
 
     renderBehind = () => {
+        return (
         <div className={this.state.behindClicked ? 'flexContainer' : 'displayNone'}>
             <div className='behindTitle'>
                 <h3>Behind the Scenes</h3>
             </div>
         </div>
+        )
     }
 
     renderTabs = () => { 
