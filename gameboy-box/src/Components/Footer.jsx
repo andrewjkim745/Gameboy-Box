@@ -5,6 +5,7 @@ import './Styles/Footer.scss'
 
 const Footer = () => {
     return (
+        <div className='outerFooterContainer'>
         <div className='footerContainer'>
             <div className='footerRow'>
             <div className='siteLinks'>
@@ -31,6 +32,7 @@ const Footer = () => {
             <div className='bottomFooter'>
                 <p>© Gameboxd Limited. Made by Andrew J Kim and Phillip Lowe. Data made from scratch</p>
             </div>
+        </div>
         </div>
     )
 }

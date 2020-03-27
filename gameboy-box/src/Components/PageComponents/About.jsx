@@ -47,7 +47,7 @@ export default class About extends React.Component {
     }
 
     gameClick = () => {
-        if (this.state.filmDataClicked === false) {
+        if (this.state.gameDataClicked === false) {
             this.setState({
                 frequentClicked: false,
                 membershipClicked: false,
@@ -138,7 +138,7 @@ export default class About extends React.Component {
 
     renderGameData = () => {
         return (
-        <div className={this.state.filmDataClicked ? 'flexContainer' : 'displayNone'}>
+        <div className={this.state.gameDataClicked ? 'flexContainer' : 'displayNone'}>
             <div className='filmData'>
                 <h3>Game data</h3>
             </div>
@@ -214,6 +214,7 @@ export default class About extends React.Component {
                 {this.renderFrequentquestions()}
                 {this.renderMembership()}
                 {this.renderGameData()}
+                {this.renderImportData()}
                 {this.renderMigrating()}
                 {this.renderGameboxd()}
                 {this.renderBehind()}

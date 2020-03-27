@@ -22,3 +22,8 @@
 .flexContainer {
     display: flex;
 }
+
+.outerFlexContainer {
+    display: flex;
+    position: relative;
+}
