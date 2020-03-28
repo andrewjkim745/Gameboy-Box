@@ -2,13 +2,15 @@ import React from 'react'
 import './Styles/backdrop.scss'
 
 
-const backdrop = () => {
+const Backdrop = (props) => {
     return (
         <div className='backdrop-container'>
-            <div className='backdrop'></div>
+            <div className='backdropImageContainer'>
+                <div className='backdropImage'></div>
+            </div>
             {props.children}
         </div>
     )
 }
 
-export default backdrop
+export default Backdrop

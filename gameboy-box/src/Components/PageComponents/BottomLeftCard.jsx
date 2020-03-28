@@ -4,10 +4,6 @@ import '../Styles/BottomLeftCard.scss'
 import StarRatingComponent from 'react-star-rating-component';
 
 
-
-
-
-
 const BottomLeftCard = (props) => {
     return (
         <div className='bottom-card-container'>

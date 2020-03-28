@@ -3,17 +3,14 @@ import './Styles/Landing.scss'
 import CardItem from './PageComponents/CardItem'
 import Highlights from './PageComponents/Highlights'
 import ReviewedCard from './PageComponents/ReviewedCard'
-import { IoIosMenu } from 'react-icons/io'
-import { FiSearch } from 'react-icons/fi'
 import BottomLeftCard from './PageComponents/BottomLeftCard'
 import Lists from './PageComponents/Lists'
-import './Styles/NavBar.scss'
 import ListsImage from './PageComponents/ListsImage'
 import RecentNews from './PageComponents/RecentNews'
 import RecentNewsCard from './PageComponents/RecentNewsCard'
 import PopReviewersCard from './PageComponents/PopReviewersCard'
 import Reviewers from './PageComponents/Reviewers'
-import Footer from './Footer'
+import { NavLink } from 'react-router-dom'
 
 
 class Landing extends React.Component {
@@ -25,27 +22,32 @@ class Landing extends React.Component {
             windowSize: 0,
             highlights: false,
             stats: [
-                {
+                {   
+                    id: 1,
                     image: 'https://cdn.bulbagarden.net/upload/thumb/6/62/Sapphire_EN_boxart.png/250px-Sapphire_EN_boxart.png',
                     votes: 10745,
                     rating: 1601
                 },
                 {
+                    id: 2,
                     image: 'https://www.zeldadungeon.net/wiki/images/2/25/Minish-Cap-Cover.jpg',
                     votes: 19345,
                     rating: 5670
                 },
                 {
+                    id: 3,
                     image: 'https://images-na.ssl-images-amazon.com/images/I/51yZcsELkCL.jpg',
                     votes: 99998,
                     rating: 9999
                 },
                 {
+                    id: 4,
                     image: 'https://i.etsystatic.com/10309132/r/il/3560a9/1250048004/il_570xN.1250048004_djvt.jpg',
                     votes: 11112,
                     rating: 15426
                 },
                 {
+                    id: 5,
                     image: 'https://images.lukiegames.com/t_300e2/assets/images/GBA/BoxScans/GBA_Pokemon_Fire_Red_Box.jpg',
                     votes: 910,
                     rating: 2562
@@ -79,6 +81,7 @@ class Landing extends React.Component {
             ],
             Reviewed: [
                 {
+                    id: 1,
                     title: 'Pokemon Leaf Green',
                     image: 'https://upload.wikimedia.org/wikipedia/en/a/a7/Pokemon_LeafGreen_box.jpg',
                     description: 'Honestly a great remake and this game makes me think that pokemon yellow, red and blue didnt need the pokemon lets go series.',
@@ -96,6 +99,7 @@ class Landing extends React.Component {
 
                 },
                 {
+                    id: 2,
                     title: 'Mario & Luigi SuperStar Saga',
                     image: 'https://vignette.wikia.nocookie.net/mario/images/2/23/Mario_%26_Luigi_Superstar_Saga_-_North_American_Cover.png/revision/latest?cb=20120622213536',
                     description: 'My first ever rpg. It has its flaws such as the fact that it is fairy linear, but the turn based system along with bros. combos system has depth. Another thing that makes this game unique is that during the enemies turns, you as a player have control over whether or not you get hit. Bosses attack patterns that become harder and harder to learn as the game progresses and somtimes they will even fake you out. Great Game',
@@ -109,6 +113,7 @@ class Landing extends React.Component {
                     likes: 456
                 },
                 {
+                    id: 3,
                     title: 'Advance Wars',
                     image: 'https://upload.wikimedia.org/wikipedia/en/a/a7/Advance_Wars_Coverart.jpg',
                     description: 'Never Played as a Kid, is it good?',
@@ -122,6 +127,7 @@ class Landing extends React.Component {
                     likes: 151
                 },
                 {
+                    id: 4,
                     title: 'Final Fantasy Tactics Advance',
                     image: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/FinalFantasyTacticsAdvanceGBACoverArtUS.jpg/220px-FinalFantasyTacticsAdvanceGBACoverArtUS.jpg',
                     description: 'I had a lot of trouble with this game as a kid and the story really captivated me. A group of kids being transported into a fantasy world where their lives are so much better and more interesting? Literally my dream as a kid. The game has a main quest which is about 15-20 hours long, if you are a decent player, and tons of extra content that extends the total gametime to at least 40-50 hours.',
@@ -137,6 +143,7 @@ class Landing extends React.Component {
                     likes: 245
                 },
                 {
+                    id: 5,
                     title: 'Kirby & the Amazing Mirror',
                     image: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Kirby_%26_the_Amazing_Mirror.jpg/220px-Kirby_%26_the_Amazing_Mirror.jpg',
                     description: 'I am not the biggest kirby fan, but I do enjoy it for what it is and this game embodies that.',
@@ -151,6 +158,7 @@ class Landing extends React.Component {
                     likes: 344
                 },
                 {
+                    id: 6,
                     title: 'Fire Emblem',
                     image: 'https://miro.medium.com/max/2154/1*Yi-lfOw522jn9FJLnwqHiA.jpeg',
                     description: 'My first fire emblem was the roy game, but this game is definitely my favorite gba release. Its very basic fire emblem gameplay and thats all I wanted as a kid.',
@@ -167,6 +175,7 @@ class Landing extends React.Component {
                     likes: 290
                 },
                 {
+                    id: 7,
                     title: 'Kingdom Hearts Chain of Memories',
                     image: 'https://upload.wikimedia.org/wikipedia/en/1/1d/KingdomHeartsCoMCover_.jpg',
                     description: 'I love KH but didnt love how grindy this game felt as a kid. The battle system was cool and unique, but by the end of the game I didnt see a reason to not make a deck with only 9s and a few 0s. Also, This game was the catalyst for making the kh storyline 3x as confusing.',
@@ -180,6 +189,7 @@ class Landing extends React.Component {
                     likes: 200
                 },
                 {
+                    id: 8,
                     title: 'Sonic Battle',
                     image: 'https://upload.wikimedia.org/wikipedia/en/8/88/Sonic_Battle_Coverart.png',
                     description: 'Technically my first "fighting game". Could be nostalgia goggles but I liked how there was an actual combo system that felt fun to implement with different characters. Characters also had different attributes and abilities that made them feel unique. The story was decent and had a lot of junk and extra material, but overall I felt it was interesting enough.',
@@ -194,6 +204,7 @@ class Landing extends React.Component {
                     likes: 240
                 },
                 {
+                    id: 9,
                     title: 'Sonic Advance 2',
                     image: 'https://images-na.ssl-images-amazon.com/images/I/61-84qWXw2L.jpg',
                     description: 'Never played, but I have seen multiple newgrounds sonic sprite animations that came from this game',
@@ -276,20 +287,6 @@ class Landing extends React.Component {
         }
     }
 
-    componentDidMount = () => {
-        window.addEventListener('Resize', this.handleResize())
-        console.log(this.state.windowSize)
-    }
-    componentWillUnmount = () => {
-        window.removeEventListener('Resize', this.handleResize())
-    }
-
-    handleResize = (e) => {
-        this.setState({
-            windowSize: window.innerWidth
-        })
-    }
-
     handleMouseHover = () => {
         this.setState({
             hover: !this.state.hover
@@ -302,33 +299,19 @@ class Landing extends React.Component {
         })
     }
 
-
-    renderNav = () => {
-        return (
-            <div className='nav-container'>
-                <div className='nav-bar'>
-                    <div className='title'>
-                        <img className='logo' src='https://i.imgur.com/PdBoInC.png'></img>
-                        <h2>Gameboyboxd</h2>
-                    </div>
-                    <div className='nav-links'>
-                        <p>SIGN IN</p>
-                        <p>CREATE ACCOUNT</p>
-                        <p>FILMS</p>
-                        <p>LISTS</p>
-                        <p>PEOPLE</p>
-                        <div className='search-bar'><input></input><FiSearch /></div>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-
     renderCards = () => {
         return (
             <div className='card-carousel'>
                 {this.state.stats.map(stat => {
                     return (
+                        <>
+                        <NavLink exact to={{ 
+                            pathname: `/games/${stat.id}`,
+                            game: {
+                                image: stat.image,
+                            }
+                        }}
+                            className='navLink'>
                         <CardItem
                             key={stat.id}
                             image={stat.image}
@@ -338,17 +321,10 @@ class Landing extends React.Component {
                             rating={stat.rating}
                             votes={stat.votes}
                         />
+                        </NavLink>
+                        </>
                     );
                 })}
-            </div>
-        )
-    }
-
-    renderHambuger = () => {
-        return (
-            <div>
-                <h2>Gameboxd</h2>
-                <IoIosMenu />
             </div>
         )
     }
@@ -378,8 +354,17 @@ class Landing extends React.Component {
                 </div>
                 {this.state.Reviewed.map(review => {
                     return (
+                        <>
+                        <NavLink exact to={{ 
+                            pathname: `/games/${review.id}`,
+                            game: {
+                                title: review.title,
+                                image: review.image,
+                                favorites: review.likes
+                            }
+                        }}
+                            className='navLink'>
                         <BottomLeftCard
-                            key={review.id}
                             title={review.title}
                             image={review.image}
                             description={review.description}
@@ -390,6 +375,8 @@ class Landing extends React.Component {
                             user={review.user}
                             src2={review.userImage}
                         />
+                        </NavLink>
+                        </>
                     )
                 })}
             </div>
@@ -489,17 +476,13 @@ class Landing extends React.Component {
     render() {
         return (
             <>
-                {this.state.windowSize < 425 ? this.renderHambuger() : this.renderNav()}
-                <div className='backdrop-container'>
-                    <div className='backdrop'></div>
-                </div>
                 <div className='landing-quote'>
                     <h2>Track Games you've played</h2>
                     <br></br>
                     <h2>Save games you want to play</h2>
                     <br></br>
                     <h2>Tell your friends what's good.</h2>
-                    <a>GET STARTED - IT'S FREE</a>
+                    <a className='getStarted'>GET STARTED - IT'S FREE</a>
                     <div className='platforms'>
                         <p className='social'>The social network for classic GBA lovers. Also available on </p>
                         <img src='https://i.imgur.com/6eO3w1V.png'></img>
@@ -525,7 +508,6 @@ class Landing extends React.Component {
                         </div>
                     </div>
                     {this.renderRecentNews()}
-                    <Footer/>
                 </div>
             </>
         )
