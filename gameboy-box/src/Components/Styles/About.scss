@@ -21,9 +21,23 @@
 
 .flexContainer {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
 }
 
 .outerFlexContainer {
     display: flex;
     position: relative;
+    width: 90%;
+}
+
+.outerFlexContainer h3 {
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.frequentDescription {
+    margin-left: 30px;
+    color: white;
 }

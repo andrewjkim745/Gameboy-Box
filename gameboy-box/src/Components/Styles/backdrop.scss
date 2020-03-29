@@ -9,18 +9,20 @@
 
 .backdropImage {
     // max-width: 400px;
-    box-shadow: inset -2px 0px 143px 57px rgba(44,52,64,1);
-    width: 500px;
+    // box-shadow: inset -2px 0px 143px 57px rgba(44,52,64,1);
+    width: 800px;
     height: 500px;
     background-image: url('https://images.mob.org/sisgame_img/megaman_battle_network_6_cybeast_falzar/real/5_megaman_battle_network_6_cybeast_falzar.jpg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    border-radius: 100px;
 
 }
 
 .backdropImageContainer {
     display: flex;
     justify-content: center;
+    margin-top: 80px;
 }
 
 // .backdrop {

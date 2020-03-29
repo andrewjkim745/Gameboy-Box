@@ -122,6 +122,14 @@ export default class About extends React.Component {
             <div className='frequentTitle'>
                 <h3>ABOUT GAMEBOXD</h3>
             </div>
+            <div className='frequentDescription'>
+                <h2>
+                    What is Gameboxd?
+                </h2>
+                <div>
+                    <p>Gameboxd is a global social network for grass-roots gba discussion and discovery. Use it to record and share your opinions about games as you play them, or keep track off games you've played in the past. Showcase your favorites on your profile page, rate and review games as you add them, and find and follow friends to see what they've been playing.</p>
+                </div>
+            </div>
         </div>
         )
     }

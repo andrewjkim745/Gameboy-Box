@@ -33,6 +33,7 @@ class NavBar extends React.Component {
                 <p>CREATE ACCOUNT</p>
                 <p>FILMS</p>
                 <p>LISTS</p>
+                <NavLink exact to='/about'>ABOUT</NavLink>
                 <p>PEOPLE</p>
                 <div className='search-bar'><input></input><FiSearch /></div>
             </div>

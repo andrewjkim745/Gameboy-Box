@@ -33,6 +33,12 @@
     justify-content: space-evenly;
 }
 
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
 .nav-links p {
     color: white;
     margin: .5rem;
