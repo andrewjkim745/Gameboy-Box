@@ -129,6 +129,11 @@ export default class About extends React.Component {
                 <div>
                     <p>Gameboxd is a global social network for grass-roots gba discussion and discovery. Use it to record and share your opinions about games as you play them, or keep track off games you've played in the past. Showcase your favorites on your profile page, rate and review games as you add them, and find and follow friends to see what they've been playing.</p>
                 </div>
+                <div>
+                    <p>
+                        
+                    </p>
+                </div>
             </div>
         </div>
         )
