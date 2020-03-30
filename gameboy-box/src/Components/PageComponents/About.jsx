@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Styles/About.scss'
 import AboutTabs from './AboutTabs'
+import AboutDescriptions from './AboutDescriptions'
 
 
 export default class About extends React.Component {
@@ -123,17 +124,18 @@ export default class About extends React.Component {
                 <h3>ABOUT GAMEBOXD</h3>
             </div>
             <div className='frequentDescription'>
-                <h2>
-                    What is Gameboxd?
-                </h2>
-                <div>
-                    <p>Gameboxd is a global social network for grass-roots gba discussion and discovery. Use it to record and share your opinions about games as you play them, or keep track off games you've played in the past. Showcase your favorites on your profile page, rate and review games as you add them, and find and follow friends to see what they've been playing.</p>
-                </div>
-                <div>
-                    <p>
-                        
-                    </p>
-                </div>
+                <AboutDescriptions
+                title='What is Gameboxd?'
+                description="Gameboxd is a global social network for grass-roots gba discussion and discovery. Use it to record and share your opinions about games as you play them, or keep track off games youve played in the past. Showcase your favorites on your profile page, rate and review games as you add them, and find and follow friends to see what they've been playing."
+                />
+                <AboutDescriptions
+                title='Why is it called Letterboxd'
+                description='Because the website design takes inspiration from letterboxd.com. You should check why they call themselves letterboxd.'
+                />
+                <AboutDescriptions
+                title='Can i play games on Gameboxd?'
+                description='No, you will have to find your own emulator to play gba games as well as your own gba roms. Since we post ROM hacks we will most likely put direct links to the collaboration/official hack page'
+                />
             </div>
         </div>
         )
