@@ -1,6 +1,6 @@
 # Gameboy-Box
 
-Hi its Phil
+
 
 
 current look of the static website with hard coded data 
